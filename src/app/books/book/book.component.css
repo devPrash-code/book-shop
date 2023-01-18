@@ -1,0 +1,27 @@
+
+
+.book {
+    display: block;
+}
+.book .cover-photo {
+    text-align: center;
+    height: 300px;
+}
+.book img {
+    height: 100%;
+}
+.book .book-detail {
+    width: 100%;
+    max-width: 250px;
+    margin: 10px auto 0;
+}
+.book .book-detail .header {
+    min-height: 120px;
+}
+.book .book-detail h5 {
+    font-weight: 600;
+}
+.book .book-detail h5  a {
+    text-decoration: none;
+    color: #000;
+}

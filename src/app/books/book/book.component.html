@@ -1,0 +1,16 @@
+
+<div class="book">
+    <div class="cover-photo">
+        <a routerLink="/book-details/{{ book.id }}"><img src="{{ book.imageUrl }}" alt="{{ book.title }}"></a>
+    </div>
+    <div class="book-detail">
+        <div class="header">
+            <h5><a routerLink="/book-details/{{ book.id }}">{{ book.title }}</a></h5>
+            <p>by {{ book.author }}</p>
+        </div>
+        <div class="footer">
+            <h5>{{ book.amount | currency: "INR" }}</h5>
+            <button type="submit" (click)="addToCart(book)">Add to Cart</button>
+        </div>
+    </div>
+</div>

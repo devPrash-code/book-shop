@@ -1,0 +1,20 @@
+
+<div class="form">
+    <h5>login your account</h5>
+    <form (ngSubmit)="logInSubmit()" #myForm="ngForm">
+        <div class="form-control">
+            <input type="text" placeholder="email" [(ngModel)]="form.email" name="email" #email="ngModel" required />
+        </div>
+        <p *ngIf="email.invalid && (email.dirty || email.touched)">*This field is required.</p>
+
+        <div class="form-control">
+            <input type="password" placeholder="password" [(ngModel)]="form.password" name="password" #password="ngModel" required />
+        </div>
+        <p *ngIf="password.invalid && (password.dirty || password.touched)">*This field is required.</p>
+
+        <div class="form-control">
+            <button type="submit" [disabled]="myForm.form.invalid">Log In</button>
+        </div>
+    </form>
+    <p>New user? <a routerLink="/register">Sign Up</a></p>
+</div>

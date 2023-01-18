@@ -1,0 +1,22 @@
+
+<div class="book-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="content">
+                    <img src="{{ productData['imageUrl'] }}" alt="{{ productData['title'] }}">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="content">
+                    <h3>{{ productData['descTitle'] }}</h3>
+                    <p>by {{ productData['author'] }} (Author)</p>
+                    <h5>{{ productData['amount'] | currency: "INR" }}</h5>
+                    <button type="submit" (click)="addToCart()">Add to Cart</button>
+                    <p class="desclaimer">{{ productData['detail'] }}</p>
+                </div>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto odit ad eum iusto dicta aliquam libero labore deserunt a ipsa eos ut alias minus nam laboriosam sequi odio, repellendus maxime molestias praesentium.</p>
+    </div>
+</div>

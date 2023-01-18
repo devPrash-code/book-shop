@@ -1,0 +1,61 @@
+
+
+.cart-page {
+    padding: 2rem 0 12rem;
+}
+.cart-page .row {
+    display: flex;
+    align-items: center;
+    margin: 21px 0 21px;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+}
+.cart-page .row .col-md-3 {
+    width: 25%;
+    text-align: center;
+}
+.cart-page .row .col-md-3 img {
+    width: 128px;
+}
+.cart-page .row .col-md-6 {
+    width: 50%;
+}
+.cart-page .row .col-md-6 .price {
+    margin-top: 12px;
+}
+.cart-page .row .col-md-3 .counter {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+.cart-page .row .col-md-3 .counter button {
+    margin-top: 0;
+}
+.cart-page .row .col-md-3 .counter input {
+    width: 70px;
+    border: 1px solid #791cd0;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #791cd0;
+    pointer-events: none;
+}
+.cart-page .total_amount {
+    text-align: right;
+}
+.cart-page .row .col-md-6 .book-amount {
+    display: block;
+    margin-bottom: 12px;
+}
+.cart-page .row .col-md-6 button {
+    background-color: #ff5959;
+}
+.cart-page .row .col-md-6 button:hover {
+    background-color: #ff1f1f;
+}
+
+.empty_cart_msg {
+    text-align: center;
+    padding: 0 0 10rem;
+}

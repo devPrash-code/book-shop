@@ -1,0 +1,33 @@
+
+<div class="cart-page">
+    <div *ngFor="let book of cartData">
+        <div class="row">
+            <div class="col-md-3">
+                <a routerLink="/book-details/{{ book.id }}"><img src="{{ book.imageUrl }}" alt="{{ book.title }}"></a>
+            </div>
+            <div class="col-md-6">
+                <h4>{{ book.title }}</h4>
+                <p>{{ book.detail }}</p>
+                <h5 class="price"><small>sub-total</small> - {{ book.totalamount | currency: "INR" }}</h5>
+                <small class="book-amount">Book price - {{ book.amount | currency: "INR" }}</small>
+                <button type="submit" (click)="removeBook(book)">Remove from the cart</button>
+            </div>
+            <div class="col-md-3">
+                <div class="counter">
+                    <button type="submit" (click)="inc(book)">+</button>
+                    <input type="text" name="count" value="{{ book.qty }}" />
+                    <button type="submit" (click)="dec(book)">-</button>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="total_amount" *ngIf="cartData.length != 0">
+        <h4><small>Total Amount</small> - {{ totalCartProductAmount | currency: "INR" }}</h4>
+        <button>Place Order -></button>
+    </div>
+</div>
+
+<div class="empty_cart_msg" *ngIf="cartData.length == 0">
+    <h4>Your cart is Empty!</h4>
+    <img src="assets/img/empty-cart.png" alt="empty-cart" />
+</div>

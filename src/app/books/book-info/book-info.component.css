@@ -1,0 +1,27 @@
+
+
+.book-info .row {
+    display: flex;
+    padding: 90px 0 30px;
+}
+.book-info .row .col-md-4 {
+    width: calc((100% / 3));
+    text-align: center;
+}
+.book-info .row .col-md-4 .content {
+    padding: 0 15px;
+}
+.book-info .row .col-md-4 img {
+    width: 100%;
+    max-width: 320px;
+}
+.book-info .row .col-md-8 {
+    width: calc((100% / 3) + (100% / 3));
+}
+.book-info .row .col-md-8 h5,
+.book-info .row .col-md-8 .desclaimer {
+    margin-top: 36px;
+}
+.book-info .row .col-md-8 button {
+    margin-top: 12px;
+}
